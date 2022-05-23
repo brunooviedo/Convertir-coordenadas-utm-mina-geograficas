@@ -98,7 +98,8 @@ def generar():
     global resultado    
     kml = simplekml.Kml()
     kml.newpoint(name="Punto Generado", coords=[(longitud,latitud)])
-    resultado = asksaveasfilename(filetypes =[('KML', '*.KML')])
+    resultado = asksaveasfilename(defaultextension=".KML", filetypes=(("KML", "*.KML"),))
+
     
     if(resultado):
         if latitud and longitud != "":
